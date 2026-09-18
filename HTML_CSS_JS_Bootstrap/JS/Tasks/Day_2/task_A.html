@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+    <style>
+      .cardstyle {
+        border: 1px solid #fc010100;
+        padding: 15px;
+        margin: 10px;
+        border-radius: 5px;
+        background-color: rgb(248, 57, 57);
+        color: white;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+        <button onclick="GetData()"></button>
+
+      <table id="table" border="2px solid ">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <script>
+        
+        const users = [
+          { name: "Ali Ahmed", email: "ali@example.com" },
+          { name: "Sara Mostafa", email: "sara@example.com" },
+          { name: "Omar Khalid", email: "omar@example.com" },
+        ];
+
+
+
+        const tableBody = document.querySelector("#table tbody");
+
+        for(let x=0; x<users.length; x++)
+        { 
+        
+        const row = document.createElement("tr");
+        row.innerHTML = 
+        `
+         <tr>
+            <td>${users[x].name}</th>
+            <td>${users[x].email}</th>
+          </tr>
+        `;            
+        tableBody.appendChild(row);
+        };
+
+      </script>
+    </main>
+    <footer></footer>
+  </body>
+</html>

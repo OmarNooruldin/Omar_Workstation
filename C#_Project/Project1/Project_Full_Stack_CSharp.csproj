@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DAD6CA71-D73C-470B-8171-96701D268F28}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Project1</RootNamespace>
+    <AssemblyName>Project1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract_Class\Circle.cs" />
+    <Compile Include="Abstract_Class\Test.cs" />
+    <Compile Include="Abstract_Class\Employee_Astract.cs" />
+    <Compile Include="Abstract_Class\Patients_Astract.cs" />
+    <Compile Include="Abstract_Class\Person.cs" />
+    <Compile Include="Abstract_Class\Rectangle.cs" />
+    <Compile Include="Abstract_Class\Shape.cs" />
+    <Compile Include="Abstract_Class\Students_Astract.cs" />
+    <Compile Include="Arrayss\ArraysTypes.cs" />
+    <Compile Include="Arrayss\Array_Doctor.cs" />
+    <Compile Include="functions\Calculators\All_Function_Doctor_Second_Version.cs" />
+    <Compile Include="functions\Calculators\calculator.cs" />
+    <Compile Include="functions\Calculators\Doctor_First_Version.cs" />
+    <Compile Include="functions\Calculators\Main_Doctor_Second_Version.cs" />
+    <Compile Include="functions\Employee\Employee.cs" />
+    <Compile Include="functions\Employee\Test_Employee.cs" />
+    <Compile Include="functions\Program Choosing\Patient_functions.cs" />
+    <Compile Include="functions\Program Choosing\Employee_functions.cs" />
+    <Compile Include="functions\Program Choosing\Room_functions.cs" />
+    <Compile Include="functions\Program Choosing\Student_functions.cs" />
+    <Compile Include="functions\Program Choosing\Testprogram.cs" />
+    <Compile Include="functions\Student\StudentInfo.cs" />
+    <Compile Include="Controll\Else_if_Doctor.cs" />
+    <Compile Include="Controll\if_else_Doctor.cs" />
+    <Compile Include="Controll\program_Doctor.cs" />
+    <Compile Include="Controll\Switch_Doctor.cs" />
+    <Compile Include="Error Type\ErrorsType.cs" />
+    <Compile Include="Controll\IfElse.cs" />
+    <Compile Include="Controll\program4_choices.cs" />
+    <Compile Include="Controll\Swiches.cs" />
+    <Compile Include="Error Type\tasks.cs" />
+    <Compile Include="functions\Explain Function\calling_from_other_file.cs" />
+    <Compile Include="functions\Explain Function\Explain_function.cs" />
+    <Compile Include="functions\Explain Function\functions.cs" />
+    <Compile Include="functions\Patient\patient.cs" />
+    <Compile Include="functions\Patient\TestPatient.cs" />
+    <Compile Include="functions\Room\Room.cs" />
+    <Compile Include="functions\Room\TestRoom.cs" />
+    <Compile Include="functions\Student\Student.cs" />
+    <Compile Include="functions\Student\TestStudent.cs" />
+    <Compile Include="inhertance\Acountant.cs" />
+    <Compile Include="inhertance\Developer.cs" />
+    <Compile Include="inhertance\Manager.cs" />
+    <Compile Include="inhertance\Empolyee.cs" />
+    <Compile Include="inhertance\Patients.cs" />
+    <Compile Include="inhertance\Person.cs" />
+    <Compile Include="inhertance\Students.cs" />
+    <Compile Include="inhertance\Test.cs" />
+    <Compile Include="Interface\Employee.cs" />
+    <Compile Include="Interface\Patient_Interface.cs" />
+    <Compile Include="Interface\Student_Interface.cs" />
+    <Compile Include="Interface\Employee_Interface.cs" />
+    <Compile Include="Interface\IPrintable .cs" />
+    <Compile Include="Interface\Person.cs" />
+    <Compile Include="Interface\Test.cs" />
+    <Compile Include="Loopss\enhanced_Program.cs" />
+    <Compile Include="Loopss\loops.cs" />
+    <Compile Include="Loopss\Loops_Doctor.cs" />
+    <Compile Include="Interface\Task2_Abstract_Interface\TestTask2.cs" />
+    <Compile Include="Interface\Task3_Abstract_Interface\TestTask3.cs" />
+    <Compile Include="Interface\Task_Abstract_Interface\TestTask.cs" />
+    <Compile Include="Project Budget\Money.cs" />
+    <Compile Include="Project Budget\Money_Interface.cs" />
+    <Compile Include="Project Budget\Money_Program.cs" />
+    <Compile Include="Project Budget\sql.cs" />
+    <Compile Include="Project Budget\sql_insert.cs" />
+    <Compile Include="Project Budget\Test.cs" />
+    <Compile Include="SQL\sql.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="3_css_to_UsingForm.css">
+    <script src="3_script_to_Usingform.js"></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 18px;
+        padding: 30px;
+      }
+      .output {
+        margin: 20px;
+        padding: 10px;
+        background-color: aquamarine;
+        border: none;
+        border-radius: 10px;
+        font-weight: bold;
+      }
+ 
+    </style>
+  </head>
+  <body>
+    <h1>Mage Example</h1>
+    <label for="userInput">Enter Your Name</label>
+    <input type="text" name="userInput" id="userInput" />
+    <button onclick="displayWelcomeMessage()">Show Message</button>
+
+    <div class="output" id="result"></div>
+
+    <script>
+        /*
+      function displayWelcomeMessage() {
+        let name = document.getElementById("userInput").value;
+
+        if (name.trim() == "") {
+          document.getElementById("result").innerText = "Pls Enter Name";
+        } else {
+          document.getElementById("result").innerText = `Welcome , ${name}`;
+        }
+      }
+        */
+    </script>
+
+    <div>
+        <label for="grade">Enter Grade</label>
+        <input type="number" name="grade" id="grade">
+        <button onclick="GetGrade()">Get Grade</button>
+
+        <div id="result1" style="background-color: rgb(247, 4, 4); color: aliceblue;"></div>
+
+        <script>
+            function GetGrade() 
+            {
+                let grade = document.getElementById('grade').value;
+
+              if (grade >= 90)
+            {
+                document.getElementById("result1").innerHTML = "Excellent";
+            } else if (grade >= 70)
+            {
+                document.getElementById("result1").innerHTML = "Very Good";
+            } else
+            {
+                document.getElementById("result1").innerHTML = "Keep Trying";
+            }
+            }
+        </script>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+    <script>
+      /*
+      var salary = parseInt(prompt("Pls Enter Your Salary"));
+      var annualsalary = salary * 12;
+      document.write("<h2>Annual Salary is ", annualsalary, "</h2>");
+      if (salary >= 12000) {
+        document.write("<h2>High Salary");
+      } else if (salary >= 6000) {
+        document.write("<h2>Normal Salary");
+      } else {
+        document.write("<h2>Low Salary");
+        }
+            */
+    </script>
+    </div>
+
+    <div>
+    <script>
+        /*
+      var mark_1 = parseFloat(prompt("Pls Enter Your Mark"));
+      var mark_2 = parseFloat(prompt("Pls Enter Your Mark"));
+      var mark_3 = parseFloat(prompt("Pls Enter Your Mark"));
+      var average = (mark_1 + mark_2 + mark_3) / 3;
+
+      document.write("<h3>The Average Mark of Students is ", Math.round(average), "</h3>");
+      document.write("<h3>The Max Mark is ", Math.max(mark_1,mark_2,mark_3), "</h3>");
+      document.write("<h3>The Min Mark is ", Math.min(mark_1,mark_2,mark_3), "</h3>");
+      */
+    
+    </script>
+    </div>
+
+    <div>
+    <script>
+        /*
+        document.write("<h2>Check Day</h2>");
+        
+        var day = parseFloat(prompt("Pls Enter the day from 1 - 7"));
+
+        if (day>=1 && day<=5)
+    {
+        document.write("The day you entered is = ",day," Work Day");
+    } else if (day == 6 || day == 7)
+    {
+        document.write("The day you entered is = ",day," Week End");
+    } else 
+    {
+        document.write("Invlaid Input");
+    }
+    */
+    </script>
+    </div>
+
+     <div>
+    <script>
+        let x = Math.round(Math.random()*10);
+        let y = Math.round(Math.random()*10);
+        
+        let answer = parseInt(prompt(`what's the Result of ${x} * ${y}`))
+    
+        if (answer == x*y)
+    {
+        document.write("<h2>You Won </h2>")
+    }else
+    {
+        document.write("<h2>You Lose </h2>")        
+    }
+    </script>
+    </div>
+
+    <div>
+    <h2>3 Marks</h2>
+
+    <label>Mark 1:</label>
+    <input type="number" id="mark1"><br><br>
+
+    <label>Mark 2:</label>
+    <input type="number" id="mark2"><br><br>
+
+    <label>Mark 3:</label>
+    <input type="number" id="mark3"><br><br>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="avg"></p>
+    <p id="max"></p>
+    <p id="min"></p>
+
+    <script>
+        function calculate() {
+
+            let mark1 = Number(document.getElementById("mark1").value);
+            let mark2 = Number(document.getElementById("mark2").value);
+            let mark3 = Number(document.getElementById("mark3").value);
+
+            let average = (mark1 + mark2 + mark3) / 3;
+            let maximum = Math.max(mark1, mark2, mark3);
+            let minimum = Math.min(mark1, mark2, mark3);
+
+            document.getElementById("avg").innerHTML = "Average = " + average;
+            document.getElementById("max").innerHTML = "Max = " + maximum;
+            document.getElementById("min").innerHTML = "Min = " + minimum;
+        }
+    </script>
+ </div>
+
+</body>
+</html>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div>
+            <form>
+        <label for="name">Name :</label>
+        <input type="text"  id="name" required>
+      <br>
+        <label for="email">Email: </label>
+        <input type="email"  id="email" required minlength="3">
+        <br>
+        <label for="password">Password: </label>
+        <input type="password"  id="password" required minlength="10">
+      <br>
+        <label for="bd">Birth Date: </label>
+        <input type="date"  id="bd">
+        <br>
+        <label for="color">Color: </label>
+        <input type="color"  id="color">
+      <br>
+        <label for="range">Range: </label>
+        <input type="range"  id="range" min="0" max="100">
+        <br>
+        <label for="number">Number:</label>
+        <input type="number"  id="number" min="0" max="255">
+      <br>
+        <label for="phone">Phone: </label>
+        <input type="tel"  id="phone" pattern="[0-9]{10}" title="Enter 10 digits">
+        <br>
+        <label for="file">Upload: </label>
+        <input type="file"  id="file">
+      <br>
+      <input type="radio" name="Gender" value="male" id="male" checked>
+      <label for="male">Male</label>
+      <input type="radio" name="Gender" value="female" id="female">
+      <label for="female">Female</label>
+      <br>
+      <input type="radio" name="Age" value="under_18" id="under_18" checked>
+      <label for="under_18">Under 18</label>
+      <input type="radio" name="Age" value="Over_18" id="Over_18">
+      <label for="Over_18">Over 18</label>
+      <br>
+      <input type="checkbox" name="Hobby" value="Reading" id="Reading">
+      <label for="Reading">Reading</label>
+      <input type="checkbox" name="Hobby" value="Sport" id="Sport">
+      <label for="Sport">Sport</label> 
+      <input type="checkbox" name="Hobby" value="Code" id="Code" checked>
+      <label for="Code">Code</label>
+      <br>
+      <label for="Country">Choose Your Country: </label>
+      <select name="Country" id="Country">
+        <option value="0"></option>
+        <option value="Egypt">Egypt</option>
+        <option value="KSA">KSA</option>
+        <option value="Sudan">Sudan</option>
+      </select>
+      <br>
+      <input list="Country2">
+      <datalist id="Country2" name="Country2">
+      <option value="Egypt">مصر</option>
+      <option value="KSA">السعودية</option>
+      <option value="Sudan">السودان</option>
+      </datalist>
+      <br>
+        <button type="submit"> Submit </button>
+    </form>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>

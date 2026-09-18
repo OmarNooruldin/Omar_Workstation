@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+@model List<Customers>
+
+<div style="border: 1px solid #000000; padding: 40px; max-width: 400px">
+    <a asp-action="Create" class="btn btn-primary">Sign up</a>
+ <table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.Id</td>
+                <td>@customer.Name</td>
+                <td>@customer.Email</td>
+                <td>@customer.Address</td>
+                <td>@customer.Phone</td>
+            </tr>
+        }
+</table>
+      </div>

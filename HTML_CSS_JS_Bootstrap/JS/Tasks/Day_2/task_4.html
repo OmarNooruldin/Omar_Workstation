@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4</title>
+  </head>
+  <body>
+    <main>
+      <h2>Dynamic Item List</h2>
+
+      <!-- Input and Add Button -->
+      <input type="text" id="itemInput" placeholder="Enter an item..." />
+      <button id="addBtn">Add Item</button>
+
+      <!-- The Target List -->
+      <ul id="itemList"></ul>
+    </main>
+
+    <script>
+      // Select DOM elements
+      const itemInput = document.getElementById("itemInput");
+      const addBtn = document.getElementById("addBtn");
+      const itemList = document.getElementById("itemList");
+
+      // Function to add a new item
+      function addItem() {
+        const itemText = itemInput.value.trim();
+
+        // Prevent adding empty items
+        if (itemText === "") {
+          alert("Please enter a valid item.");
+          return;
+        }
+
+        // 1. Create the list item element (<li>)
+        const li = document.createElement("li");
+        li.textContent = itemText + " "; // Add space between text and button
+
+        // 2. Create the delete button (<button>)
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+
+        // 3. Attach click event directly to the delete button
+        deleteBtn.addEventListener("click", function () {
+          li.remove(); // Removes the specific <li> from the DOM
+        });
+
+        // 4. Append button to the list item, then list item to the list
+        li.appendChild(deleteBtn);
+        itemList.appendChild(li);
+
+        // 5. Clear the input field and refocus
+        itemInput.value = "";
+        itemInput.focus();
+      }
+
+      // Trigger action on button click
+      addBtn.addEventListener("click", addItem);
+
+      // Optional: Allow pressing "Enter" key to add items
+      itemInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          addItem();
+        }
+      });
+    </script>
+  </body>
+</html>

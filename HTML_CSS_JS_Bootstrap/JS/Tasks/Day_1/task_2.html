@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<body>
+     <h2>Task 2</h2>
+        <br>
+        <h2>Input Your Information</h2>
+        <label for="inputName">Enter Name: </label>
+        <input type="text" name="inputName" id="inputName">
+<br>
+        <label for="inputAge">Enter Age: </label>
+        <input type="number" name="inputAge" id="inputAge">
+<br>
+        <label for="inputEmail">Enter Email: </label>
+        <input type="email" name="inputEmail" id="inputEmail">
+<br>
+        <button onclick="showData()">Show Data</button>
+
+        <div id="result">
+        </div>
+
+        <script>
+            function showData() 
+            {
+                let name = document.getElementById("inputName").value;
+                
+                let age = document.getElementById("inputAge").value;
+                
+                let email = document.getElementById("inputEmail").value;
+
+                if (!name || !age || !email)
+                {
+                    document.getElementById("result").innerText= "Pls Enter Your Data :";                  
+                }else 
+                {
+                    document.getElementById("result").innerText= 
+                    `
+                    Your Name is ${name} \n 
+                    Your Age is ${age} Years \n 
+                    Your email is ${email}
+                    `;
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

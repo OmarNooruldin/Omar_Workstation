@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+    <div>
+        <h2>Task 1</h2>
+        <br>
+        <h2>Input Your Age</h2>
+        <label for="inputAge">Enter Age: </label>
+        <input type="number" name="inputAge" id="inputAge">
+        <button onclick="showAge()">Show Age</button>
+
+        <div id="result">
+
+        </div>
+        <script>
+            function showAge() 
+            {
+                let age = document.getElementById("inputAge").value;
+                if(age.trim() === "")
+                {
+                    document.getElementById("result").innerText= "Pls Enter Your Age :";                  
+                }else 
+                {
+                    document.getElementById("result").innerText= `Your Age is ${age}`;
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

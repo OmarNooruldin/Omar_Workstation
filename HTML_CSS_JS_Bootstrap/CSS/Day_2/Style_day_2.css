@@ -1,0 +1,73 @@
+header
+{
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: crimson;
+    text-align: center;
+    color: rgb(4, 4, 128);
+}
+
+body
+{
+    background-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    font-style: bold;
+    color: rgb(255, 251, 42);
+}
+
+section
+{
+    color: aqua;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+}
+
+article
+{
+    color: beige;
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+aside
+{
+    color: chocolate;
+    font-family: cursive;
+    text-align: center;
+}
+
+div 
+{
+    color: cadetblue;
+    font-size: large;
+    font-family: fantasy;
+    text-align: center;
+}
+
+span
+{
+    color: crimson;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+pre
+{
+    color: darkgoldenrod;
+}
+
+form
+{
+    font-size: 24px;
+}
+
+ul
+{
+text-align: justify;
+}
+
+ol 
+{
+    list-style-type: disc;
+    list-style-type: lower-alpha;
+}

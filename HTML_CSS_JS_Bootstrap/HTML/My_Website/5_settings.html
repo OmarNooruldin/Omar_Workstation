@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="1_index.html">Home</a>
+        <a href="2_course.html">Course Content</a>
+        <a href="3_dashboard.html">Clients Reviews</a>
+        <a href="4_profile.html">Your Profile</a>
+        <a href="5_settings.html">Change Settings</a>
+        <a href="6_subscribe.html">Subscription</a>
+        <a href="7_search.html">Search</a>
+        <a href="8_contact.html">Contact Me</a>
+      </nav>
+    </header>
+
+    <hr>
+
+    <main>
+      <section
+        style="max-width: 500px; border: 1px solid #000000; padding: 20px">
+        <form id="Settings">
+          <label for="language"> Language :</label><br />
+          <select id="language">
+            <option value="ar" selected>Arabic</option>
+            <option value="en">English</option>
+          </select>
+          <br /><br />
+
+          <label>Notifications :</label><br />
+          <input type="checkbox" id="notify_email" checked /> Email <br />
+          <input type="checkbox" id="notify_sms" /> SMS <br /><br />
+
+          <label>Theme :</label><br />
+          <input type="radio" name="theme" value="light" checked /> Light<br />
+          <input type="radio" name="theme" value="dark" /> Dark<br /><br />
+
+          <button type="submit">Save Settings</button>
+        </form>
+      </section>
+    </main>
+
+<hr>
+
+    <footer>
+      <p>© 2026 All rights reserved</p>
+    </footer>
+  </body>
+</html>

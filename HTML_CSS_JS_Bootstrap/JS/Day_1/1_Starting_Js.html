@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS IS Web Page From Client Site</title>
+  </head>
+  <body>
+    <div>
+      <h2>Welcome to Js</h2>
+      <p id="demo">JavaScript can Change Html</p>
+      <button
+        type="button"
+        onclick="
+          document.getElementById('demo').innerHTML =
+            '<b>Js</b> Changes <u>Html</u>' "
+      > Click me
+      </button>
+    </div>
+    <div>
+        <h2>Change Attribute value</h2>
+        <img id="myimg" src="off.jpg" alt="img1" style="width: 200px;">
+        <br>
+        <button onclick="document.getElementById('myimg').src='on.jpg'">
+             Click to Turn it off
+        </button>
+        <button onclick="document.getElementById('myimg').src='off.jpg'">
+             Click to Turn it on
+        </button>
+    </div>
+  </body>
+</html>

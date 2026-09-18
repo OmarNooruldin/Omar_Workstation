@@ -1,0 +1,64 @@
+body 
+{
+    background-color: cadetblue;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 50px;
+    margin: 50px;
+    color: rgb(177, 9, 9);
+}
+
+h1, h2, h3
+{
+    color: rgb(12, 11, 114);
+}
+
+p
+{
+font-size: 18px;
+line-height: 1.6;
+margin-bottom: 50px;
+}
+
+ul
+{
+list-style-type: square;
+padding-left: 30px;
+}
+
+ol
+{
+    list-style-type: upper-alpha;
+}
+
+dl dt 
+{
+font-weight: bold;
+color: black;
+margin-top: 10px;
+}
+
+dl dd
+{
+margin-left: 20px;
+color: chocolate;
+}
+
+table
+{
+    color: rgb(10, 20, 167);
+    border-block: 12;
+    margin-left: 42.5%;
+}
+
+th, td
+{
+    text-align: center;
+    font-style: italic;
+    font-size: large;
+}
+
+th
+{
+background-color: rgb(167, 11, 11);
+}

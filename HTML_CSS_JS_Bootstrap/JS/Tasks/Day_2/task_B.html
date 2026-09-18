@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+    <style>
+        .cards {
+          width: 500px;
+          position: relative;
+          display: grid;
+          place-content: center;
+          background-color: darkseagreen;
+          text-align: center;
+          margin-left: 400px;
+        }
+
+        div
+        {
+          text-align: center;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <button onclick="Fetch()">Fetch Data From API</button>
+        <section class="cards" id="cards"></section>
+      </div>
+
+      <script>
+        async function Fetch() {
+          const resp = await fetch("https://fakestoreapi.com/products");
+          const prod = await resp.json();
+
+          const card = document.getElementById("cards");
+          card.className = "cards";
+          card.innerHTML = "";
+
+          prod.forEach((product) => {
+            const each = document.createElement("div");
+            each.innerHTML =
+                        `
+                         <h3>${product.title}</h3>
+                         <h4>The price is ${product.price}$</h4>
+                         <p><img src="${product.image}" alt="" width="200px"></p>
+                         <hr>
+                        `;
+            card.appendChild(each);
+          });
+        }
+      </script>
+    </main>
+    <footer></footer>
+  </body>
+</html>

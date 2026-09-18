@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Products Page";
+}
+
+@model List<Products>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To My Store</h1>
+    <hr>
+    <div class="cardstyle">
+        @foreach (var product in Model)
+        {
+            <br>
+            <h3> @product.Name</h3>
+            <p><img src="@product.Image" alt="" width="200px"></p>
+            <p><b>Description :</b>@product.Description  </p>
+            <p><b>Price :</b>@product.Price $ </p>
+            <button class="btn btn-primary" type="submit" onclick="AddToCart()">Buy Now</button>
+            <hr>
+        }
+    </div>
+</div>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Data 2</title>
+    <style>
+        .cardstyle
+        {
+            border: 1px solid #fc010100;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            background-color: rgb(248, 57, 57);
+            color: white;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Team Page</h1>
+        <section id="TeamSection">
+        </section>
+        <script>
+         const team = [
+          { name: "Ahmed", job: "Developer", city: "Cairo" },
+          { name: "Fatimah", job: "Cyber Security", city: "Jeddah" },
+          { name: "Omar", job: "Designer", city: "Dammam" },
+          { name: "Mohammed", job: "Manager", city: "Riyadh" },
+        ];
+
+        const section = document.getElementById("TeamSection");
+        team.forEach(member=>{
+            const card = document.createElement("div")
+            card.className= "cardstyle";
+            card.innerHTML = 
+            `
+            <div class="cardstyle">
+            <h3>${member.name} </h3>
+            <p><b>Job :</b>${member.job}</p>
+            <p><b>City :</b>${member.city}</p>                
+            </div>
+            `;
+            section.appendChild(card);
+        });
+        </script>
+    </div>
+
+    <div>
+        <h1>Fetch Data From API</h1>
+        <button onclick="FetchData()">Load</button>
+        <br>      
+        <section id="sectionTeam"></section>
+        <script>
+            async function FetchData() 
+            {
+                const response_1 = await fetch("https://jsonplaceholder.typicode.com/users");
+                const employee = await response_1.json();
+
+                const section_1 = document.getElementById("sectionTeam");
+                section_1.innerHTML = "";
+                
+                employee.forEach(emp =>  {
+
+                    const card_1 = document.createElement("div");
+                    card_1.className = "cardstyle";
+                    card_1.innerHTML = 
+                    `
+                     <h3>${emp.name} </h3>
+                     <p><b>Email :</b>${emp.email}</p>
+                     <p><b>City :</b>${emp.address.city}</p> 
+                     <p><b>Phone :</b>${emp.phone}</p>                     
+                    `;
+                    section_1.appendChild(card_1);
+                });
+            }
+        </script>
+    </div>
+</body>
+</html>

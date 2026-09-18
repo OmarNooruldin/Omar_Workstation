@@ -1,0 +1,86 @@
+body
+{
+    background-color: cadetblue;
+}
+
+nav
+{
+}
+
+header
+{
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+main
+{
+}
+
+div
+{
+    background-color: cadetblue;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    color: black;
+
+}
+
+article
+{
+    background-color: cadetblue;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    color: black;
+}
+
+form .form-dashboard
+{
+    background-color: rgb(245, 245, 129);
+    margin-left: 350px;
+    margin-right: 350px;
+}
+
+form
+{
+
+}
+
+
+
+section
+{
+    text-align: center;
+}
+
+button
+{
+    border-radius: 10px;
+    background-color: darkcyan;
+    width: 120px;
+    height: 50px;
+    transition: all 1s;
+}
+
+table
+{
+    table-layout: fixed;
+    text-align: center;
+    margin-left: 430px;    
+}
+
+ul li
+{
+    margin-left: 555px;
+    padding-right: 590px;
+}
+
+footer
+{
+    background-color: cadetblue;
+    padding: 2px;
+    margin: 2px;    
+}

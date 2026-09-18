@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Project1.Project
+{
+    interface Money_Interface
+    {
+        void GetSalaryDetails();
+
+        double CalculateSaving();
+
+
+    }
+}

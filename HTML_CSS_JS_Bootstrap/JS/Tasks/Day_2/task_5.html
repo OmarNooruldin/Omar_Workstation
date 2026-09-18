@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 5</title>
+    <style>
+      .faq-answer {
+        display: none;
+      }
+      .faq-item.active .faq-answer {
+        display: block;
+      }
+    </style>
+  </head>
+  ### ✅ Task 5 – Toggle FAQ Questions Clicking on a question toggles visibility
+  of the answer using class toggle.
+  <body>
+    <main>
+      <div class="faq-item">
+        <button class="faq-question">What is your return policy?</button>
+        <div class="faq-answer">You can return items within 30 days.</div>
+      </div>
+    </main>
+    <script>
+      const questions = document.querySelectorAll(".faq-question");
+
+      questions.forEach((question) => {
+        question.addEventListener("click", () => {
+          const faqItem = question.parentElement;
+          faqItem.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

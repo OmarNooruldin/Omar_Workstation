@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body 
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            padding: 20px;
+        }
+        button 
+        {
+            background-color: rgb(40, 97, 219);
+            padding: 15px;
+            font-size: larger;
+            font-weight: bold;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 5px 10px 15px rgb(50, 151, 197);
+        }
+        .darkMode
+        {
+            background-color: black;
+            color: white;
+        }
+        .lightMode
+        {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body class="LightMode">
+    <div>
+        <h2>Switch Between Dark Mode And Light Mode </h2>
+        <p>This is the Simple Paragraph</p>
+    </div>
+
+    <button onclick="setDarkMode()">Dark Mode</button>
+    <button onclick="setLightMode()">Light Mode</button>
+
+    <script>
+        function setDarkMode() 
+        {
+            document.body.classList.add("darkMode");
+            document.body.classList.remove("lightMode");
+        }
+        function setLightMode()
+        {
+            document.body.classList.add("lightMode");
+            document.body.classList.remove("darkMode");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 3</title>
+  </head>
+  <body>
+    <div>
+      <h2>Task 5</h2>
+
+      <input type="search" id="myInput" placeholder="Search for names.."
+        title="Type in a name" />
+
+      <ul id="nameList">
+        <li>Adele</a></li>
+        <li>Agnes</a></li>
+
+        <li>Billy</a></li>
+        <li>Bob</a></li>
+
+        <li>Calvin</a></li>
+        <li>Christina</a></li>
+        <li>Cindy</a></li>
+
+        <li>Omar</a></li>
+        <li>Fatimah</a></li>
+        <li>Ahmed</a></li>
+      </ul>
+
+    </div>
+
+    <script>
+ // Get references to DOM elements
+const searchInput = document.getElementById('myInput');
+const listItems = document.querySelectorAll('#nameList li');
+
+// Listen for input changes in the search box
+searchInput.addEventListener('input', function(event) {
+    // Get current query and convert to lowercase
+    const filterText = event.target.value.toLowerCase();
+
+    // Loop through each list item
+    listItems.forEach(item => {
+        // Extract the name string and convert to lowercase
+        const nameText = item.textContent.toLowerCase();
+
+        // Check if the name includes the typed string
+        if (nameText.includes(filterText)) {
+             item.style.display = '';  // Show item
+        } else {
+            item.style.display = 'none';   // Hide item
+        }
+    });
+});
+    </script>
+  </body>
+</html>
