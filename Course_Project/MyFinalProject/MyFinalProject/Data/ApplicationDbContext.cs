@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
+using Microsoft.Identity.Client;
 using MyFinalProject.Models;
 
 namespace MyFinalProject.Data
@@ -12,8 +14,19 @@ namespace MyFinalProject.Data
         //Define Your DbSets here
         // public DbSet<YourEntity> YourEntity { get; set; }
 
-        public DbSet<Employee> Employee { get; set; }
+        public DbSet<Employee> Employees { get; set; }
 
+        public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Department> Departments { get; set; }
+
+        public DbSet<Product> Products { get; set; }
+
+        public DbSet<User> Users { get; set; }
+
+        public DbSet<Role> Roles { get; set; }
+
+        public DbSet<Permission> Permissions { get; set; }
 
     }
 }

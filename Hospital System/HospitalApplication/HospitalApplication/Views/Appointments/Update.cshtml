@@ -1,0 +1,46 @@
+﻿@model Appointment
+@{
+    ViewData["Title"] = "Update Appointment";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+
+<form asp-action="Update" method="post">
+    <div class="form-group">
+        <label asp-for="AppointmentDate">Appointment Date:</label>
+        <input asp-for="AppointmentDate" class="form-control">
+        <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ReasonForVisit">Reason :</label>
+        <input asp-for="ReasonForVisit" class="form-control" />
+        <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ReasonForVisit">Reason :</label>
+        <input asp-for="ReasonForVisit" class="form-control" />
+        <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Patient :</label>
+        <select asp-for="PatientId" asp-items="@ViewBag.Patients" class="form-select">
+            <option value="">--Select Patient By Id--</option>
+        </select>
+        <span asp-validation-for="PatientId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Doctor :</label>
+        <select asp-for="StaffId" asp-items="@ViewBag.Staffs" class="form-select">
+            <option value="">--Select Doctor By Id--</option>
+        </select>
+        <span asp-validation-for="StaffId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a class="btn btn-primary" asp-action="Index">Go to Index Page</a>
+</form>

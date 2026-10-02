@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Appointments";
+}
+@model List<Appointment>
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+
+<a asp-action="Create" class="btn btn-primary">Add New Appointment </a>
+
+<br>
+<br>
+
+<table class="table table-hover table-info">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Appointment Date</th>
+            <th>Reason For Stay</th>
+            <th>Patient Name</th>
+            <th>Doctor Id</th>
+            <th>Controls</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Appointments in Model)
+        {
+            <tr>
+                <td>@Appointments.Id</td>
+                <td>@Appointments.AppointmentDate</td>
+                <td>@Appointments.ReasonForVisit</td>
+                <td>@Appointments.Patient?.LastName</td>
+                <td>@Appointments.StaffId</td>
+                <td>
+                    <a asp-action="Details" asp-route="@Appointments.Id" class="btn btn-outline-primary">Details</a>
+                    <a asp-action="Update" asp-route="@Appointments.Id" class="btn btn-outline-success">Update</a>
+                    <a asp-action="Delete" asp-route="@Appointments.Id" class="btn btn-outline-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

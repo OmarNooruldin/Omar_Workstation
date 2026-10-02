@@ -1,0 +1,44 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Products Information";
+}
+
+
+<h1>@ViewData["Title"]</h1>
+
+<a class="btn btn-outline-primary" asp-action="Create"> Create New Product</a>
+
+<br>
+<br>
+
+<div>
+    <table class="table table-bordered table-info"> 
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Category</th>
+                <th>Controls</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pro in Model)
+            {
+            <tr>
+                <td>@pro.Id</td>
+                    <td>@pro.Name</td>
+                    <td>@pro.Price</td>
+                    <td>@pro.Image</td>
+                    <td>@pro.Category?.Name</td>
+                <td>
+                    <a class="btn btn-primary" asp-action="Details" asp-route-Id="@pro.Id">Details</a>
+                    <a class="btn btn-success" asp-action="Edit" asp-route-Id="@pro.Id">Edit</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-Id="@pro.Id">Delete</a>
+                </td>
+            </tr>
+            }
+    </tbody>
+    </table>
+</div>

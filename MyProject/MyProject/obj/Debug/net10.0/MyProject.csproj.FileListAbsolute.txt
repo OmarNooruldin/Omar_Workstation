@@ -232,3 +232,16 @@ C:\Users\Dell\Desktop\MyProject\MyProject\bin\Debug\net10.0\runtimes\win-arm64\n
 C:\Users\Dell\Desktop\MyProject\MyProject\bin\Debug\net10.0\runtimes\win-x64\native\msalruntime.dll
 C:\Users\Dell\Desktop\MyProject\MyProject\bin\Debug\net10.0\runtimes\win-x86\native\msalruntime_x86.dll
 C:\Users\Dell\Desktop\MyProject\MyProject\obj\Debug\net10.0\MyProject.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\Omar_Work_Area\MyProject\MyProject\obj\Debug\net10.0\MyProject.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\Omar_Work_Area\MyProject\MyProject\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\Dell\Desktop\Omar_Work_Area\MyProject\MyProject\obj\Debug\net10.0\MyProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\Desktop\Omar_Work_Area\MyProject\MyProject\obj\Debug\net10.0\MyProject.AssemblyInfoInputs.cache
+C:\Users\Dell\Desktop\Omar_Work_Area\MyProject\MyProject\obj\Debug\net10.0\MyProject.AssemblyInfo.cs
+C:\Users\Dell\Desktop\Omar_Work_Area\MyProject\MyProject\obj\Debug\net10.0\MyProject.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\Omar_Work_Area\MyProject\MyProject\obj\Debug\net10.0\MyProject.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Dell\Desktop\Omar_Work_Area\MyProject\MyProject\obj\Debug\net10.0\MyProject.RazorAssemblyInfo.cache
+C:\Users\Dell\Desktop\Omar_Work_Area\MyProject\MyProject\obj\Debug\net10.0\MyProject.RazorAssemblyInfo.cs
+C:\Users\Dell\Desktop\Omar_Work_Area\MyProject\MyProject\obj\Debug\net10.0\MyProject.sourcelink.json
+C:\Users\Dell\Desktop\Omar_Work_Area\MyProject\MyProject\obj\Debug\net10.0\MyProject.dll
+C:\Users\Dell\Desktop\Omar_Work_Area\MyProject\MyProject\obj\Debug\net10.0\refint\MyProject.dll
+C:\Users\Dell\Desktop\Omar_Work_Area\MyProject\MyProject\obj\Debug\net10.0\MyProject.pdb

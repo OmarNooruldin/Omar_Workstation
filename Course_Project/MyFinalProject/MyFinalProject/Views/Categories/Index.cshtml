@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Categories Management";
+}
+
+@model List<Category>
+
+<div class="text-center">
+
+    <h1>Categories Information</h1>
+
+    <div>
+        <a asp-action="Create" class="btn btn-success">Add New Category</a>
+        <br />
+    </div>
+    <br>
+    <table class="table table-bordered table-primary">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Controls</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in Model)
+            {
+                <tr>
+                    <td>@category.Id</td>
+                    <td>@category.Name</td>
+                    <td>@category.Description</td>
+                    <td>
+                        <a class="btn btn-secondary" asp-action="Details" asp-route-Id="@category.Id">Details</a>
+                        <a class="btn btn-warning" asp-action="Update" asp-route-Id="@category.Id">Update</a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-Id="@category.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+

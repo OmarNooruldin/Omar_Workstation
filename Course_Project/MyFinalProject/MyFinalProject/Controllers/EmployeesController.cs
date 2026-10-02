@@ -1,107 +1,208 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using MyFinalProject.Data;
 using MyFinalProject.Models;
 
 namespace MyFinalProject.Controllers
 {
-    public class EmployeeController : Controller
+    public class EmployeesController : Controller
     {
-        //public IActionResult Index()
-        //{
-        //    List<Employee> emps = new List<Employee>();
 
-        //    Employee emp = new Employee()
-        //    {
-        //        Id = 1,
-        //        Name = "Omar",
-        //        Email = "om@gamil.com",
-        //        Address = "KSA",
-        //        City = "DMM",
-        //        Phone = "1234567890",
-        //        Salary = 15000
-        //    };
+            //// Old code for Index action method
+            //public IActionResult Index()
+            //{
 
-        //    Employee emp1 = new Employee()
-        //    {
-        //        Id = 2,
-        //        Name = "Ahmed",
-        //        Email = "oah@gamil.com",
-        //        Address = "KSA",
-        //        City = "Cairo",
-        //        Phone = "1234512345",
-        //        Salary = 25000
-        //    };
+            //    //Employee emp = new Employee();
 
-        //    Employee emp2 = new Employee()
-        //    {
-        //        Id = 3,
-        //        Name = "Fatimah",
-        //        Email = "ft@gamil.com",
-        //        Address = "KSA",
-        //        City = "JED",
-        //        Phone = "1234123400",
-        //        Salary = 20000
-        //    };
+            //    //emp.Id = 1;
+            //    //emp.Name = "Ahmad";
+            //    //emp.Email = "Ahmad@gmail";
+            //    //emp.Address = "Cario";
+            //    //emp.Phone = "00001";
+            //    //emp.Salary = 1000;
+            //    //emp.City = "Cario";
 
-        //    Employee emp3 = new Employee()
-        //    {
-        //        Id = 4,
-        //        Name = "Mohammed",
-        //        Email = "moe@gamil.com",
-        //        Address = "KSA",
-        //        City = "RIYADH",
-        //        Phone = "123123123",
-        //        Salary = 10000
-        //    };
-        //    emps.Add(emp);
-        //    emps.Add(emp1);
-        //    emps.Add(emp2);
-        //    emps.Add(emp3);
+            //    List<Employee> emps = new List<Employee>();
 
-        //    return View(emps);
-        //}
+            //    Employee emp1 = new Employee()
+            //    {
+            //        Id = 1,
+            //        Name = "Ahmad",
+            //        Email = "Ahmad@gmail",
+            //        Address = "Cario",
+            //        Phone = "00001",
+            //        Salary = 1000,
+            //        City = "Cario"
+            //    };
 
+            //    Employee emp2 = new Employee()
+            //    {
+            //        Id = 2,
+            //        Name = "Ali",
+            //        Email = "Ali@gmail",
+            //        Address = "Alex",
+            //        Phone = "00002",
+            //        Salary = 2000,
+            //        City = "Alex"
+            //    };
 
-        // Dependency injection 
-        // Inject the ApplicationDbContext 
+            //    Employee emp3 = new Employee()
+            //    {
+            //        Id = 3,
+            //        Name = "Omar",
+            //        Email = "Omar@gmail",
+            //        Address = "Giza",
+            //        Phone = "00003",
+            //        Salary = 3000,
+            //        City = "Giza"
+            //    };
 
-        private readonly ApplicationDbContext _context;
+            //    Employee emp4 = new Employee()
+            //    {
+            //        Id = 4,
+            //        Name = "Fatimah",
+            //        Email = "Fatimah@gmail",
+            //        Address = "Rayadh",
+            //        Phone = "00003",
+            //        Salary = 3000,
+            //        City = "Gada"
+            //    };
 
-        public EmployeeController(ApplicationDbContext context)
-        {
-            _context = context;
-        }
+            //    emps.Add(emp1);
+            //    emps.Add(emp2);
+            //    emps.Add(emp3);
+            //    emps.Add(emp4);
 
-        // New Code for Employees action methods
-
-        [HttpGet]
-        public IActionResult Index()
-        {
-            List<Employee> Employees = _context.Employee.ToList();
-            return View(Employees);
-        }
-
-        [HttpGet]
-        public IActionResult Create()
-        {
-            return View();
-        }
+            //    return View(emps);
+            //}
 
 
+            // New code for Employees action methods ************** 
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create(Employee emps)
-        {
-            if (ModelState.IsValid)
+            // Inject the ApplicationDbContext into the controller
+
+            //Dependency injection is used to provide the controller with an instance of the ApplicationDbContext,
+            //which allows it to interact with the database.
+
+            private readonly ApplicationDbContext _context;
+
+            public EmployeesController(ApplicationDbContext context)
             {
-                _context.Employee.Add(emps);
+                _context = context;
+            }
+
+
+
+            [HttpGet]
+            public IActionResult Index()
+            {
+                // Retrieve the list of employees from the database using Entity Framework
+                // 'ToList()' It Equal Select all employees from the Employees table in the database and convert them to a list.
+
+                List<Employee> Employees = _context.Employees.Include(e => e.Department).ToList();
+                //include() Load Realeted Department Data
+                return View(Employees);
+            }
+            //[HttpGet]
+            ////public IActionResult GetAllEmployees()
+            ////{
+
+            //    //  List<Employee> Employees = _context.Employees.Include(e => e.Department).ToList();
+            //    List<Employee> Employees = _context.Employees.ToList();
+            //    return Ok(Employees);
+            //    // View()     : Screen
+            //    // NotFound() : Not Found Screen
+            //    // Content()  : Text
+            //    // Ok()       : Data
+            //    // BadRequest() :Error Data
+            //    // RedirectTo Action() : Retrive Data from Anther Action
+            //}
+
+            [HttpGet]
+            public IActionResult Details(int Id)
+            {
+            Employee? emp = _context.Employees.Include(e => e.Department).FirstOrDefault(e => e.Id == Id);
+                if (emp == null)
+                {
+                    return NotFound();
+                }
+                return View(emp);
+            }
+
+            [HttpGet]
+            public IActionResult Create()
+            {
+            LoadDepartments();
+            return View();
+            }
+
+            [HttpPost]
+            [ValidateAntiForgeryToken]
+            public IActionResult Create(Employee employee)
+            {
+                if (ModelState.IsValid)
+                {
+                    _context.Employees.Add(employee);
                 _context.SaveChanges();
 
-                return RedirectToAction("Index");
+                    return RedirectToAction("Index");
+                }
+            LoadDepartments();
+            return View(employee);
+
             }
-            return View();
+
+            [HttpGet]
+            public IActionResult Update(int Id)
+            {
+                Employee? emp = _context.Employees.Find(Id);
+                if (emp == null)
+                {
+                    return NotFound();
+                }
+            LoadDepartments();
+            return View(emp);
+            }
+            [HttpPost]
+            public IActionResult Update(Employee employee)
+            {
+                if (ModelState.IsValid)
+                {
+                    _context.Employees.Update(employee);
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+            LoadDepartments();
+            return View(employee);
+            }
+            [HttpGet]
+            public IActionResult Delete(int Id)
+            {
+                Employee? emp = _context.Employees.Find(Id);
+                if (emp == null)
+                {
+                    return NotFound();
+                }
+            LoadDepartments();
+            return View(emp);
+            }
+            [HttpPost]
+            public IActionResult Delete(Employee employee)
+            {
+
+                _context.Employees.Remove(employee);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+
+
+            }
+
+        private void LoadDepartments()
+        {
+            IEnumerable<Department> departments = _context.Departments.ToList();
+            ViewBag.Departments = new SelectList(departments, "Id", "Name");
+        }
 
     }
-}
 }

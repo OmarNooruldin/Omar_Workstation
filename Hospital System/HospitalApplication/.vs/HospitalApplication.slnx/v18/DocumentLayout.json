@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Hospital System\\HospitalApplication\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{09D1FB7B-473D-5131-6CAB-247D21E24C2D}|HospitalApplication\\HospitalApplication.csproj|c:\\users\\dell\\desktop\\omar_work_area\\hospital system\\hospitalapplication\\hospitalapplication\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09D1FB7B-473D-5131-6CAB-247D21E24C2D}|HospitalApplication\\HospitalApplication.csproj|solutionrelative:hospitalapplication\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09D1FB7B-473D-5131-6CAB-247D21E24C2D}|HospitalApplication\\HospitalApplication.csproj|c:\\users\\dell\\desktop\\omar_work_area\\hospital system\\hospitalapplication\\hospitalapplication\\models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09D1FB7B-473D-5131-6CAB-247D21E24C2D}|HospitalApplication\\HospitalApplication.csproj|solutionrelative:hospitalapplication\\models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09D1FB7B-473D-5131-6CAB-247D21E24C2D}|HospitalApplication\\HospitalApplication.csproj|c:\\users\\dell\\desktop\\omar_work_area\\hospital system\\hospitalapplication\\hospitalapplication\\models\\billing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09D1FB7B-473D-5131-6CAB-247D21E24C2D}|HospitalApplication\\HospitalApplication.csproj|solutionrelative:hospitalapplication\\models\\billing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09D1FB7B-473D-5131-6CAB-247D21E24C2D}|HospitalApplication\\HospitalApplication.csproj|c:\\users\\dell\\desktop\\omar_work_area\\hospital system\\hospitalapplication\\hospitalapplication\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09D1FB7B-473D-5131-6CAB-247D21E24C2D}|HospitalApplication\\HospitalApplication.csproj|solutionrelative:hospitalapplication\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09D1FB7B-473D-5131-6CAB-247D21E24C2D}|HospitalApplication\\HospitalApplication.csproj|c:\\users\\dell\\desktop\\omar_work_area\\hospital system\\hospitalapplication\\hospitalapplication\\controllers\\staffscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09D1FB7B-473D-5131-6CAB-247D21E24C2D}|HospitalApplication\\HospitalApplication.csproj|solutionrelative:hospitalapplication\\controllers\\staffscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Billing.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Hospital System\\HospitalApplication\\HospitalApplication\\Models\\Billing.cs",
+              "RelativeDocumentMoniker": "HospitalApplication\\Models\\Billing.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Hospital System\\HospitalApplication\\HospitalApplication\\Models\\Billing.cs",
+              "RelativeToolTip": "HospitalApplication\\Models\\Billing.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T11:44:17.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Hospital System\\HospitalApplication\\HospitalApplication\\Models\\Patient.cs",
+              "RelativeDocumentMoniker": "HospitalApplication\\Models\\Patient.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Hospital System\\HospitalApplication\\HospitalApplication\\Models\\Patient.cs",
+              "RelativeToolTip": "HospitalApplication\\Models\\Patient.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAkwCYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T11:43:05.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StaffsController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Hospital System\\HospitalApplication\\HospitalApplication\\Controllers\\StaffsController.cs",
+              "RelativeDocumentMoniker": "HospitalApplication\\Controllers\\StaffsController.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Hospital System\\HospitalApplication\\HospitalApplication\\Controllers\\StaffsController.cs",
+              "RelativeToolTip": "HospitalApplication\\Controllers\\StaffsController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T11:42:06.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Hospital System\\HospitalApplication\\HospitalApplication\\Models\\Appointment.cs",
+              "RelativeDocumentMoniker": "HospitalApplication\\Models\\Appointment.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Hospital System\\HospitalApplication\\HospitalApplication\\Models\\Appointment.cs",
+              "RelativeToolTip": "HospitalApplication\\Models\\Appointment.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAABwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T11:37:11.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Staff.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Hospital System\\HospitalApplication\\HospitalApplication\\Models\\Staff.cs",
+              "RelativeDocumentMoniker": "HospitalApplication\\Models\\Staff.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Hospital System\\HospitalApplication\\HospitalApplication\\Models\\Staff.cs",
+              "RelativeToolTip": "HospitalApplication\\Models\\Staff.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T11:23:00.74Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

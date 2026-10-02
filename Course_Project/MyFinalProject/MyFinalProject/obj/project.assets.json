@@ -3221,11 +3221,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dell\\Desktop\\Final_Project\\MyFinalProject\\MyFinalProject\\MyFinalProject.csproj",
+      "projectUniqueName": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Course_Project\\MyFinalProject\\MyFinalProject\\MyFinalProject.csproj",
       "projectName": "MyFinalProject",
-      "projectPath": "C:\\Users\\Dell\\Desktop\\Final_Project\\MyFinalProject\\MyFinalProject\\MyFinalProject.csproj",
+      "projectPath": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Course_Project\\MyFinalProject\\MyFinalProject\\MyFinalProject.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dell\\Desktop\\Final_Project\\MyFinalProject\\MyFinalProject\\obj\\",
+      "outputPath": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Course_Project\\MyFinalProject\\MyFinalProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
