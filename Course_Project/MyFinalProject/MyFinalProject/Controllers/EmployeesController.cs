@@ -170,7 +170,7 @@ namespace MyFinalProject.Controllers
                 if (ModelState.IsValid)
                 {
                     _context.Employees.Update(employee);
-                    _context.SaveChanges();
+                    _context.SaveChangesAsync();
                     return RedirectToAction("Index");
                 }
             LoadDepartments();

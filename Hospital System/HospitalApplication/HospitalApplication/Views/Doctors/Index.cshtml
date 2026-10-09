@@ -1,0 +1,71 @@
+@using HospitalApplication.Security
+@model IEnumerable<HospitalApplication.Models.Doctor>
+
+@{
+    ViewData["Title"] = "Doctors Management";
+}
+
+<h1 class="bg-primary text-center text-light">@ViewData["Title"]</h1>
+<hr>
+
+@if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.DoctorCreate))
+{
+    <a class="btn btn-primary" asp-action="Create">Add New Doctor</a>
+}
+<table class="table table-hover table-light">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LicenseNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Speciality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConsultationFee)
+            </th>
+            <th>Controls</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.LicenseNumber)
+            </td>
+            <td>
+                    @Html.DisplayFor(model => item.Speciality)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.ConsultationFee)
+            </td>
+                <td>
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.DoctorDetails))
+                    {
+                        <a asp-action="Details" asp-route-Id="@item.Id">Details</a>
+                    }
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.DoctorUpdate))
+                    {
+                        <a asp-action="Update" asp-route-Id="@item.Id">Update</a>
+                    }
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.DoctorDelete))
+                    {
+                        <a asp-action="Delete" asp-route-Id="@item.Id">Delete</a>
+                    }
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

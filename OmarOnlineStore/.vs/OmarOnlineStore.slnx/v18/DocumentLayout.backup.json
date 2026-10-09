@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\OmarOnlineStore\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{48398C8C-B94C-1690-D39C-296059D26947}|OmarOnlineStore\\OmarOnlineStore.csproj|c:\\users\\dell\\desktop\\omar_work_area\\omaronlinestore\\omaronlinestore\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48398C8C-B94C-1690-D39C-296059D26947}|OmarOnlineStore\\OmarOnlineStore.csproj|solutionrelative:omaronlinestore\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48398C8C-B94C-1690-D39C-296059D26947}|OmarOnlineStore\\OmarOnlineStore.csproj|c:\\users\\dell\\desktop\\omar_work_area\\omaronlinestore\\omaronlinestore\\views\\users\\assignrole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{48398C8C-B94C-1690-D39C-296059D26947}|OmarOnlineStore\\OmarOnlineStore.csproj|solutionrelative:omaronlinestore\\views\\users\\assignrole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,31 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\OmarOnlineStore\\OmarOnlineStore\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "OmarOnlineStore\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\OmarOnlineStore\\OmarOnlineStore\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "OmarOnlineStore\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAK4AAAAAAAAAAAAIwLwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-30T19:00:00.438Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AssignRole.cshtml",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\OmarOnlineStore\\OmarOnlineStore\\Views\\Users\\AssignRole.cshtml",
-              "RelativeDocumentMoniker": "OmarOnlineStore\\Views\\Users\\AssignRole.cshtml",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\OmarOnlineStore\\OmarOnlineStore\\Views\\Users\\AssignRole.cshtml",
-              "RelativeToolTip": "OmarOnlineStore\\Views\\Users\\AssignRole.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-30T18:59:11.458Z"
             }
           ]
         }

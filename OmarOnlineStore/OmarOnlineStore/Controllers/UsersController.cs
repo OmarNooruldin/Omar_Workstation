@@ -151,8 +151,8 @@ public class UsersController : Controller
     [HttpGet]
     public IActionResult AssignRole(int Id)
     {
-        User? user = _context.Users.Include(e => e.Roles).FirstOrDefault(e => e.Id == Id);
-        if(User == null) 
+        User? user = _context.Users.Include(u => u.Roles).FirstOrDefault(u => u.Id == Id);
+        if(user == null) 
         {
             return NotFound();
         }
@@ -166,19 +166,19 @@ public class UsersController : Controller
     }
 
     [HttpPost]
-    public IActionResult AssignRole(int id,List<int> roleIds) 
+    public IActionResult AssignRole(int Id,List<int> roleIds) 
     {
-        User? user = _context.Users.Include(u=> u.Roles).FirstOrDefault(u => u.Id == id);
+        User? user = _context.Users.Include(u=> u.Roles).FirstOrDefault(u => u.Id == Id);
         if (user == null)
         {
             return NotFound();
         }
         user.Roles.Clear();
-        List<Role> SelectRole = _context.Roles.Where(p => roleIds.Contains(p.Id)).ToList();
+        List<Role> SelectRole = _context.Roles.Where(r => roleIds.Contains(r.Id)).ToList();
 
         foreach (Role role in SelectRole)
         {
-            _context.Roles.Add(role);
+            user.Roles.Add(role);
         }
 
         _context.SaveChangesAsync();

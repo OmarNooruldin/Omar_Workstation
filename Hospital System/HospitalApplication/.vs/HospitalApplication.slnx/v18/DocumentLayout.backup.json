@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Hospital System\\HospitalApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{09D1FB7B-473D-5131-6CAB-247D21E24C2D}|HospitalApplication\\HospitalApplication.csproj|c:\\users\\dell\\desktop\\omar_work_area\\hospital system\\hospitalapplication\\hospitalapplication\\models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09D1FB7B-473D-5131-6CAB-247D21E24C2D}|HospitalApplication\\HospitalApplication.csproj|solutionrelative:hospitalapplication\\models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{09D1FB7B-473D-5131-6CAB-247D21E24C2D}|HospitalApplication\\HospitalApplication.csproj|c:\\users\\dell\\desktop\\omar_work_area\\hospital system\\hospitalapplication\\hospitalapplication\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09D1FB7B-473D-5131-6CAB-247D21E24C2D}|HospitalApplication\\HospitalApplication.csproj|solutionrelative:hospitalapplication\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,14 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Staff.cs",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Hospital System\\HospitalApplication\\HospitalApplication\\Models\\Staff.cs",
-              "RelativeDocumentMoniker": "HospitalApplication\\Models\\Staff.cs",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Hospital System\\HospitalApplication\\HospitalApplication\\Models\\Staff.cs",
-              "RelativeToolTip": "HospitalApplication\\Models\\Staff.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Hospital System\\HospitalApplication\\HospitalApplication\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "HospitalApplication\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\Hospital System\\HospitalApplication\\HospitalApplication\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "HospitalApplication\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-02T11:23:00.74Z",
+              "WhenOpened": "2026-10-09T11:14:25.238Z",
               "EditorCaption": ""
             }
           ]

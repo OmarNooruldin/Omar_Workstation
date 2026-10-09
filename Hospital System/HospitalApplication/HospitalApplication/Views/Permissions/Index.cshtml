@@ -1,0 +1,48 @@
+@using HospitalApplication.Security
+@model IEnumerable<HospitalApplication.Models.Permission>
+
+@{
+    ViewData["Title"] = "Permissions Management";
+}
+
+<h1 class="text-center">@ViewData["Title"]</h1>
+<hr>
+<p>
+    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.PermissionManagement))
+    {
+        <a class="btn btn-primary" asp-action="Create">Create New Permission</a>
+    }
+</p>
+<table class="table table-hover table-light">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>Controls</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.Name)
+            </td>
+                <td>
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.PermissionManagement))
+                    {
+                        <a asp-action="Details" asp-route-Id="@item.Id">Details</a>
+                    }
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.PermissionManagement))
+                    {
+                        <a asp-action="Update" asp-route-Id="@item.Id">Update</a>
+                    }
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.PermissionManagement))
+                    {
+                        <a asp-action="Delete" asp-route-Id="@item.Id">Delete</a>
+                    }
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -147,4 +147,42 @@ public class UsersController : Controller
     {
         return _context.Users.Any(e => e.Id == id);
     }
+
+    [HttpGet]
+    public IActionResult AssignRole(int Id)
+    {
+        User? user = _context.Users.Include(e => e.Roles).FirstOrDefault(e => e.Id == Id);
+        if (User == null)
+        {
+            return NotFound();
+        }
+
+        List<Role> roles = _context.Roles.ToList();
+        ViewBag.AllRoles = roles;
+
+        ViewBag.UserRole = user.Roles.Select(r => r.Id).ToList();
+
+        return View(user);
+    }
+
+    [HttpPost]
+    public IActionResult AssignRole(int id, List<int> roleIds)
+    {
+        User? user = _context.Users.Include(u => u.Roles).FirstOrDefault(u => u.Id == id);
+        if (user == null)
+        {
+            return NotFound();
+        }
+        user.Roles.Clear();
+        List<Role> SelectRole = _context.Roles.Where(p => roleIds.Contains(p.Id)).ToList();
+
+        foreach (Role role in SelectRole)
+        {
+            _context.Roles.Add(role);
+        }
+
+        _context.SaveChangesAsync();
+
+        return RedirectToAction("Index");
+    }
 }

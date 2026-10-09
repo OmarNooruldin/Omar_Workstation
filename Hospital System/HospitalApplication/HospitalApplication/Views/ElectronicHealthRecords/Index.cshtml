@@ -1,5 +1,55 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using HospitalApplication.Security
+﻿
 @{
+    ViewData["Title"] = "Electric Health Records Management";
 }
+@model List<ElectronicHealthRecord>
+
+<h1 class="bg-primary text-center text-light">@ViewData["Title"]</h1>
+<hr>
+
+    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.ElectronicHealthRecordCreate))
+    {
+        <a class="btn btn-primary" asp-action="Create">Create New Electronic Health Record</a>
+    }
+<br />
+<br />
+
+<table class="table table-hover table-light">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Visit Date</th>
+            <th>Diagnosis</th>
+            <th>Symptoms</th>
+            <th>Notes</th>
+            <th>Controls</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var electronicHealthRecord in Model)
+        {
+            <tr>
+                <td>@electronicHealthRecord.Id</td>
+                <td>@electronicHealthRecord.VisitDate</td>
+                <td>@electronicHealthRecord.Diagnosis</td>
+                <td>@electronicHealthRecord.Symptoms</td>
+                <td>@electronicHealthRecord.Notes</td>
+                <td>
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.ElectronicHealthRecordDetails))
+                    {
+                        <a asp-action="Details" asp-route-Id="@electronicHealthRecord.Id">Details</a>
+                    }
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.ElectronicHealthRecordUpdate))
+                    {
+                        <a asp-action="Update" asp-route-Id="@electronicHealthRecord.Id">Update</a>
+                    }
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.ElectronicHealthRecordDelete))
+                    {
+                        <a asp-action="Delete" asp-route-Id="@electronicHealthRecord.Id">Delete</a>
+                    }
+                </td>
+            </tr>
+
+        }
+    </table>

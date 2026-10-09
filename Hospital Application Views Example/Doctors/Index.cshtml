@@ -1,0 +1,43 @@
+﻿﻿@{
+ViewData["Title"] = "Doctors Mangment";
+}
+@model List<Doctor>
+
+<h1>Doctor Infromation</h1>
+<hr>
+
+<a asp-action="Create" class="btn btn-success">Add New Doctor</a>
+
+<br />
+<br />
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>License Number</th>
+            <th>Consultation Fee</th>
+            <th>Department Name</th>
+            <th>Controls</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var doctor in Model)
+        {
+            <tr>
+                <td>@doctor.Id</td>
+                <td>@doctor.FirstName</td>
+                <td>@doctor.LastName</td>
+                <td>@doctor.LicenseNumber</td>
+                <td>@doctor.ConsultationFee</td>
+                <td>@doctor.Department?.Name</td>
+                <td>
+                    <a class="btn btn-secondary" asp-action="Details" asp-route-Id="@doctor.Id">Details</a>
+                    <a class="btn btn-warning" asp-action="Update" asp-route-Id="@doctor.Id">Update</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-Id="@doctor.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>

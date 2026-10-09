@@ -1,5 +1,31 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Billing
 @{
+    ViewData["Title"] = "Delete Bill";
 }
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+
+<form asp-action="Delete" method="post">
+    <div class="form-group">
+        <label asp-for="TotalAmount">First Name:</label>
+        <input asp-for="TotalAmount" class="form-control" disabled>
+        <span asp-validation-for="TotalAmount" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="InsuranceProvider">Last Name :</label>
+        <input asp-for="InsuranceProvider" class="form-control" disabled />
+        <span asp-validation-for="InsuranceProvider" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Appointment :</label>
+        <input asp-for="Appointment.AppointmentDate" class="form-control" disabled>
+        <span asp-validation-for="AppointmentId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Delete</button>
+    <a class="btn btn-primary" asp-action="Index">Go to Index Page</a>
+
+</form>

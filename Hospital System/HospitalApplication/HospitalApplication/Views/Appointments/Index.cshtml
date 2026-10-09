@@ -1,24 +1,28 @@
-﻿@{
-    ViewData["Title"] = "Appointments";
+﻿@using HospitalApplication.Security
+@{
+    ViewData["Title"] = "Appointments Management";
 }
 @model List<Appointment>
 
-<h1>@ViewData["Title"]</h1>
+<h1 class="bg-primary text-center text-light">@ViewData["Title"]</h1>
 <hr />
 
-<a asp-action="Create" class="btn btn-primary">Add New Appointment </a>
-
+@if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.AppointmentCreate))
+{
+    <a class="btn btn-primary" asp-action="Create">Add New Appointment</a>
+}
 <br>
 <br>
 
-<table class="table table-hover table-info">
+<table class="table table-hover table-light">
     <thead>
         <tr>
             <th>#</th>
             <th>Appointment Date</th>
-            <th>Reason For Stay</th>
+            <th>Reason For Visit</th>
+            <th>Status </th>
+            <th>Doctor Name</th>
             <th>Patient Name</th>
-            <th>Doctor Id</th>
             <th>Controls</th>
         </tr>
     </thead>
@@ -29,12 +33,22 @@
                 <td>@Appointments.Id</td>
                 <td>@Appointments.AppointmentDate</td>
                 <td>@Appointments.ReasonForVisit</td>
+                <td>@Appointments.Status</td>
+                <td>@Appointments.DoctorName</td>
                 <td>@Appointments.Patient?.LastName</td>
-                <td>@Appointments.StaffId</td>
                 <td>
-                    <a asp-action="Details" asp-route="@Appointments.Id" class="btn btn-outline-primary">Details</a>
-                    <a asp-action="Update" asp-route="@Appointments.Id" class="btn btn-outline-success">Update</a>
-                    <a asp-action="Delete" asp-route="@Appointments.Id" class="btn btn-outline-danger">Delete</a>
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.AppointmentDetails))
+                    {
+                        <a asp-action="Details" asp-route-Id="@Appointments.Id">Details</a> 
+                    }
+                    @if(User.HasClaim(PermissionsNames.ClaimType,PermissionsNames.AppointmentUpdate))
+                    {
+                    <a asp-action="Update" asp-route-Id="@Appointments.Id">Update</a>
+                    }
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.AppointmentDelete))
+                    {
+                        <a asp-action="Delete" asp-route-Id="@Appointments.Id">Delete</a>
+                    }
                 </td>
             </tr>
         }

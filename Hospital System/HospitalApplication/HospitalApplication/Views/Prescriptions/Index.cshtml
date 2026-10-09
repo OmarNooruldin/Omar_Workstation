@@ -1,0 +1,53 @@
+﻿@using HospitalApplication.Security
+﻿
+@{
+    ViewData["Title"] = "Prescription Mangement";
+}
+@model List<Prescription>
+
+<h1 class="bg-primary text-center text-light">@ViewData["Title"]</h1>
+<hr>
+    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.PrescriptionCreate))
+    {
+        <a class="btn btn-primary" asp-action="Create">Add New Prescription</a>
+    }
+<br />
+<br />
+
+<table class="table table-hover table-light">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Medice Name</th>
+            <th>Dosage</th>
+            <th>Frequency</th>
+            <th>Duration Days</th>
+            <th>Controls</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var prescription in Model)
+        {
+            <tr>
+                <td>@prescription.Id</td>
+                <td>@prescription.MedicineName</td>
+                <td>@prescription.Dosage</td>
+                <td>@prescription.Frequency</td>
+                <td>@prescription.DurationDays</td>
+                <td>
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.PrescriptionDetails))
+                    {
+                        <a asp-action="Details" asp-route-Id="@prescription.Id">Details</a>
+                    }
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.PrescriptionUpdate))
+                    {
+                        <a asp-action="Update" asp-route-Id="@prescription.Id">Update</a>
+                    }
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.PrescriptionDelete))
+                    {
+                        <a asp-action="Delete" asp-route-Id="@prescription.Id">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
+    </table>

@@ -14,18 +14,16 @@ namespace HospitalApplication.Models
         [Display(Name = "Reason for Visit")]
         public string ReasonForVisit { get; set; } = string.Empty;
 
+        [Required]
+        public string Status { get; set; } = string.Empty;
+
+        [Required]
+        public string DoctorName { get; set; } = string.Empty;
+
         public int PatientId { get; set; }
-        public required Patient Patient { get; set; }
+        public Patient? Patient { get; set; }
 
-        public int StaffId { get; set; }
-        public required Staff Staff { get; set; }
-
-
-
-        //public BookingStatus Status { get; set; } = BookingStatus.Pending;
-
-        //public int PatientId { get; set; }
-        //[ForeignKey("PatientId")]
-        //public virtual Patient Patient { get; set; }
+        //public int DoctorId { get; set; }
+        //public Doctor? Doctor { get; set; }
     }
 }

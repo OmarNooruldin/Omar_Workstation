@@ -13,10 +13,7 @@ namespace HospitalApplication.Models
         public string? InsuranceProvider { get; set; }
 
         public int AppointmentId { get; set; }
-        public required Appointment Appointment { get; set; }
-
-        //Using the enum property
-        //public PaymentStatus Status { get; set; } = PaymentStatus.Unpaid;
+        public Appointment? Appointment { get; set; }
 
     }
 }

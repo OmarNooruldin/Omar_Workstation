@@ -1,0 +1,52 @@
+@using HospitalApplication.Security
+@model IEnumerable<HospitalApplication.Models.Role>
+
+@{
+    ViewData["Title"] = "Roles Management";
+}
+
+<h1 class="text-center">@ViewData["Title"]</h1>
+<hr>
+<p>
+    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.RoleManagement))
+    {
+        <a class="btn btn-primary" asp-action="Create">Create New</a>
+    }
+</p>
+<table class="table table-hover table-light">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>Controls</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.Name)
+            </td>
+                <td>
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.RoleManagement))
+                    {
+                        <a asp-action="Details" asp-route-Id="@item.Id">Details</a>
+                    }
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.RoleManagement))
+                    {
+                        <a asp-action="Update" asp-route-Id="@item.Id">Update</a>
+                    }
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.RoleManagement))
+                    {
+                        <a asp-action="Delete" asp-route-Id="@item.Id">Delete</a>
+                    }
+                    @if(User.HasClaim(PermissionsNames.ClaimType,PermissionsNames.RoleManagement))
+                    {
+                        <a asp-action="AssignPermission" asp-route-Id="@item.Id">AssignPermission</a>
+                    }
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

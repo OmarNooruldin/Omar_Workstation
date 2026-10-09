@@ -1,5 +1,65 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using HospitalApplication.Security
+﻿
 @{
+    ViewData["Title"] = "Patients Management";
 }
+@model List<Patient>
+
+<h1 class="bg-primary text-center text-light">@ViewData["Title"]</h1>
+<hr>
+    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.PatientCreate))
+    {
+        <a class="btn btn-primary" asp-action="Create">Add New Patient</a>
+    }
+<br />
+<br />
+
+<table class="table table-hover table-light">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date Of Birth</th>
+            <th>Gender</th>
+            <th>Contact Number</th>
+            <th>Email</th>
+            <th>Blood Group</th>
+            <th>Address</th>
+            <th>Emergency Contact Name</th>
+            <th>Emergency Contact Phone</th>
+            <th>Controls</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var patient in Model)
+        {
+            <tr>
+                <td>@patient.Id</td>
+                <td>@patient.FirstName</td>
+                <td>@patient.LastName</td>
+                <td>@patient.DateOfBirth</td>
+                <td>@patient.Gender</td>
+                <td>@patient.ContactNumber</td>
+                <td>@patient.Email</td>
+                <td>@patient.BloodGroup</td>
+                <td>@patient.Address</td>
+                <td>@patient.EmergencyContactName</td>
+                <td>@patient.EmergencyContactPhone</td>
+                <td>
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.PatientDetails))
+                    {
+                        <a asp-action="Details" asp-route-Id="@patient.Id">Details</a>
+                    }
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.PatientUpdate))
+                    {
+                        <a asp-action="Update" asp-route-Id="@patient.Id">Update</a>
+                    }
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.PatientDelete))
+                    {
+                        <a asp-action="Delete" asp-route-Id="@patient.Id">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
+    </table>

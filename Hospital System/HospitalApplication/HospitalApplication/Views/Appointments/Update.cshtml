@@ -14,15 +14,21 @@
     </div>
 
     <div class="form-group">
-        <label asp-for="ReasonForVisit">Reason :</label>
+        <label asp-for="ReasonForVisit">Reason For Visit :</label>
         <input asp-for="ReasonForVisit" class="form-control" />
-        <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+        <span asp-validation-for="ReasonForVisit" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="ReasonForVisit">Reason :</label>
-        <input asp-for="ReasonForVisit" class="form-control" />
-        <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+        <label asp-for="Status">Status :</label>
+        <input asp-for="Status" class="form-control" />
+        <span asp-validation-for="Status" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DoctorName">Doctor Name :</label>
+        <input asp-for="DoctorName" class="form-control" />
+        <span asp-validation-for="DoctorName" class="text-danger"></span>
     </div>
 
     <div class="form-group">
@@ -31,14 +37,6 @@
             <option value="">--Select Patient By Id--</option>
         </select>
         <span asp-validation-for="PatientId" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label>Doctor :</label>
-        <select asp-for="StaffId" asp-items="@ViewBag.Staffs" class="form-select">
-            <option value="">--Select Doctor By Id--</option>
-        </select>
-        <span asp-validation-for="StaffId" class="text-danger"></span>
     </div>
 
     <button type="submit" class="btn btn-primary">Update</button>

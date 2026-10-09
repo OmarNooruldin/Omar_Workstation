@@ -1,0 +1,46 @@
+﻿@model Prescription
+@{
+    ViewData["Title"] = "Create New Prescription";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="MedicineName"></label>
+        <input asp-for="MedicineName" class="form-control">
+        <span asp-validation-for="MedicineName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Dosage"></label>
+        <input asp-for="Dosage" class="form-control" />
+        <span asp-validation-for="Dosage" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Frequency"></label>
+        <input asp-for="Frequency" class="form-control" />
+        <span asp-validation-for="Frequency" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DurationDays"></label>
+        <input asp-for="DurationDays" class="form-control" />
+        <span asp-validation-for="DurationDays" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>ElectronicHealthRecord :</label>
+        <select asp-for="ElectronicHealthRecordId"
+                asp-items="@ViewBag.ElectronicHealthRecord" class="form-select">
+            <option value="">--Select Appointment--</option>
+        </select>
+        <span asp-validation-for="ElectronicHealthRecordId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a class="btn btn-primary" asp-action="Index">Go to Index Page</a>
+
+</form>

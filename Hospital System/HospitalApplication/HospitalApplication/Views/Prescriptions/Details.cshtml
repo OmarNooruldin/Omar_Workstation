@@ -1,0 +1,44 @@
+﻿@model Prescription
+@{
+    ViewData["Title"] = "Details Prescription";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+
+<form asp-action="/" method="post">
+    <div class="form-group">
+        <label asp-for="MedicineName"></label>
+        <input asp-for="MedicineName" class="form-control">
+        <span asp-validation-for="MedicineName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Dosage"></label>
+        <input asp-for="Dosage" class="form-control" />
+        <span asp-validation-for="Dosage" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Frequency"></label>
+        <input asp-for="Frequency" class="form-control" />
+        <span asp-validation-for="Frequency" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DurationDays"></label>
+        <input asp-for="DurationDays" class="form-control" />
+        <span asp-validation-for="DurationDays" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Electronic Health Record :</label>
+        <input asp-for="ElectronicHealthRecord.Diagnosis" class="form-control" disabled>
+        <span asp-validation-for="ElectronicHealthRecordId" class="text-danger"></span>
+    </div>
+
+    <a class="btn btn-warning" asp-action="Update" asp-route-Id="@Model.Id">Update</a>
+    <a class="btn btn-danger" asp-action="Delete" asp-route-Id="@Model.Id">Delete</a>
+    <a class="btn btn-primary" asp-action="Index">Go to Index Page</a>
+
+</form>
