@@ -1,0 +1,50 @@
+﻿@using HospitalApplication.Dtos
+@using HospitalApplication.Security
+@model IEnumerable<BillingListDto>﻿
+@{
+    ViewData["Title"] = "Bills Management";
+}
+
+<h1 class="bg-primary text-center text-light">@ViewData["Title"]</h1>
+<hr>
+
+    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.BillingCreate))
+    {
+        <a class="btn btn-primary" asp-action="Create">Add New Bill</a>
+    }
+<br />
+<br />
+
+<table class="table table-hover table-light">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Total Amount</th>
+            <th>Insurance Provider</th>
+            <th>Controls</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var billing in Model)
+        {
+            <tr>
+                <td>@billing.Id</td>
+                <td>@billing.TotalAmount</td>
+                <td>@billing.InsuranceProvider</td>
+                <td>
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.BillingDetails))
+                    {
+                        <a asp-action="Details" asp-route-Id="@billing.Id">Details</a>
+                    }
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.BillingUpdate))
+                    {
+                        <a asp-action="Update" asp-route-Id="@billing.Id">Update</a>
+                    }
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.BillingDelete))
+                    {
+                        <a asp-action="Delete" asp-route-Id="@billing.Id">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
+    </table>

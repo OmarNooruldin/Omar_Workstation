@@ -1,0 +1,14 @@
+﻿using HospitalApp.Data;
+
+namespace HospitalApp.Repositories.ElectronicHealthRecords
+{
+    public class ElectronicHealthRecordRepository : IElectronicHealthRecordRepository
+    {
+        private readonly ApplicationDbContext _context;
+
+        public ElectronicHealthRecordRepository(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+    }
+}

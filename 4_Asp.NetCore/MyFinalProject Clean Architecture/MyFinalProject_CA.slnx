@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="MyFinalProject.Api/MyFinalProject.Api.csproj" />
+  <Project Path="MyFinalProject.Application/MyFinalProject.Application.csproj" />
+  <Project Path="MyFinalProject.Domain/MyFinalProject.Domain.csproj" />
+  <Project Path="MyFinalProject.Infrastructure/MyFinalProject.Infrastructure.csproj" />
+  <Project Path="MyFinalProject.WebDashboard/MyFinalProject.WebDashboard.csproj" />
+  <Project Path="MyFinalProject.WebSite/MyFinalProject.WebSite.csproj" />
+</Solution>

@@ -1,0 +1,27 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "MyFinalProject.Application\\MyFinalProject.Application.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "MyFinalProject.Domain\\MyFinalProject.Domain.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "MyFinalProject.Infrastructure\\MyFinalProject.Infrastructure.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "MyFinalProject.WebDashboard\\MyFinalProject.WebDashboard.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "MyFinalProject.WebSite\\MyFinalProject.WebSite.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

@@ -1,0 +1,101 @@
+﻿@using HospitalApplication.Application.Security
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h1>Welcome , @User.Identity.Name</h1>
+<hr />
+
+<div class="row">
+    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.AppointmentView))
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body text-light bg-secondary">
+                    <h4 class="card-title"><b>Appointments</b></h4>
+                    <p>View and Manage Appointments According to your Permission</p>
+                    <a asp-controller="Appointments" asp-action="Index" class="btn btn-primary">Appointments</a>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (User.HasClaim(PermissionsNames.ClaimType,PermissionsNames.BillingView))
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body text-light bg-secondary">
+                    <h4 class="card-title"><b>Billings</b></h4>
+                    <p>View and Manage Billings According to your Permission</p>
+                    <a asp-controller="Billings" asp-action="Index" class="btn btn-primary">Billings</a>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.DepartmentView))
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body text-light bg-secondary">
+                    <h4 class="card-title"><b>Departments</b></h4>
+                    <p>View and Manage Departments According to your Permission</p>
+                    <a asp-controller="Departments" asp-action="Index" class="btn btn-primary">Departments</a>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.DoctorView))
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body text-light bg-secondary">
+                    <h4 class="card-title"><b>Doctors List</b></h4>
+                    <p>View and Manage Doctors According to your Permission</p>
+                    <a asp-controller="Doctors" asp-action="Index" class="btn btn-primary">Doctors</a>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.ElectronicHealthRecordView))
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body text-light bg-secondary">
+                    <h4 class="card-title"><b>ElectronicHealthRecords</b></h4>
+                    <p>View and Manage ElectronicHealthRecords According to your Permission</p>
+                    <a asp-controller="ElectronicHealthRecords" asp-action="Index" class="btn btn-primary">ElectronicHealthRecords</a>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.PatientView))
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body text-light bg-secondary">
+                    <h4 class="card-title"><b>Patients List</b></h4>
+                    <p>View and Manage Patients According to your Permission</p>
+                    <a asp-controller="Patients" asp-action="Index" class="btn btn-primary">Patients</a>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.PrescriptionView))
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body text-light bg-secondary">
+                    <h4 class="card-title"><b>Prescriptions</b></h4>
+                    <p>View and Manage Prescriptions According to your Permission</p>
+                    <a asp-controller="Prescriptions" asp-action="Index" class="btn btn-primary">Prescriptions</a>
+                </div>
+            </div>
+        </div>
+    }
+    
+</div>

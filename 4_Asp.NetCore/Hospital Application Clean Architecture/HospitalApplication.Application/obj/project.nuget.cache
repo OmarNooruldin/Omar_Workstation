@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "DIhqoloi4QE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Dell\\Desktop\\Omar_Work_Area\\4_Asp.NetCore\\Hospital Application Clean Architecture\\HospitalApplication.Application\\HospitalApplication.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dell\\.nuget\\packages\\system.security.cryptography.pkcs\\10.0.14\\system.security.cryptography.pkcs.10.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}

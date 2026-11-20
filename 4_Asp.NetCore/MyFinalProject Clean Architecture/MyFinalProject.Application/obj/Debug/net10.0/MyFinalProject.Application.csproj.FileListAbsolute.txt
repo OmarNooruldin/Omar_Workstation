@@ -1,0 +1,32 @@
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject\MyFinalProject.Application\bin\Debug\net10.0\MyFinalProject.Application.deps.json
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject\MyFinalProject.Application\bin\Debug\net10.0\MyFinalProject.Application.dll
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject\MyFinalProject.Application\bin\Debug\net10.0\MyFinalProject.Application.pdb
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject\MyFinalProject.Application\bin\Debug\net10.0\MyFinalProject.Domain.dll
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject\MyFinalProject.Application\bin\Debug\net10.0\MyFinalProject.Domain.pdb
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject\MyFinalProject.Application\obj\Debug\net10.0\MyFinalProject.Application.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject\MyFinalProject.Application\obj\Debug\net10.0\MyFinalProject.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject\MyFinalProject.Application\obj\Debug\net10.0\MyFinalProject.Application.AssemblyInfoInputs.cache
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject\MyFinalProject.Application\obj\Debug\net10.0\MyFinalProject.Application.AssemblyInfo.cs
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject\MyFinalProject.Application\obj\Debug\net10.0\MyFinalProject.Application.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject\MyFinalProject.Application\obj\Debug\net10.0\MyFinalProject.Application.sourcelink.json
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject\MyFinalProject.Application\obj\Debug\net10.0\MyFinalP.553338A3.Up2Date
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject\MyFinalProject.Application\obj\Debug\net10.0\MyFinalProject.Application.dll
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject\MyFinalProject.Application\obj\Debug\net10.0\refint\MyFinalProject.Application.dll
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject\MyFinalProject.Application\obj\Debug\net10.0\MyFinalProject.Application.pdb
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject\MyFinalProject.Application\obj\Debug\net10.0\ref\MyFinalProject.Application.dll
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject Clean Architecture\MyFinalProject.Application\bin\Debug\net10.0\MyFinalProject.Application.deps.json
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject Clean Architecture\MyFinalProject.Application\bin\Debug\net10.0\MyFinalProject.Application.dll
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject Clean Architecture\MyFinalProject.Application\bin\Debug\net10.0\MyFinalProject.Application.pdb
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject Clean Architecture\MyFinalProject.Application\bin\Debug\net10.0\MyFinalProject.Domain.dll
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject Clean Architecture\MyFinalProject.Application\bin\Debug\net10.0\MyFinalProject.Domain.pdb
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject Clean Architecture\MyFinalProject.Application\obj\Debug\net10.0\MyFinalProject.Application.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject Clean Architecture\MyFinalProject.Application\obj\Debug\net10.0\MyFinalProject.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject Clean Architecture\MyFinalProject.Application\obj\Debug\net10.0\MyFinalProject.Application.AssemblyInfoInputs.cache
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject Clean Architecture\MyFinalProject.Application\obj\Debug\net10.0\MyFinalProject.Application.AssemblyInfo.cs
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject Clean Architecture\MyFinalProject.Application\obj\Debug\net10.0\MyFinalProject.Application.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject Clean Architecture\MyFinalProject.Application\obj\Debug\net10.0\MyFinalProject.Application.sourcelink.json
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject Clean Architecture\MyFinalProject.Application\obj\Debug\net10.0\MyFinalP.553338A3.Up2Date
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject Clean Architecture\MyFinalProject.Application\obj\Debug\net10.0\MyFinalProject.Application.dll
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject Clean Architecture\MyFinalProject.Application\obj\Debug\net10.0\refint\MyFinalProject.Application.dll
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject Clean Architecture\MyFinalProject.Application\obj\Debug\net10.0\MyFinalProject.Application.pdb
+C:\Users\Dell\Desktop\Omar_Work_Area\MyFinalProject Clean Architecture\MyFinalProject.Application\obj\Debug\net10.0\ref\MyFinalProject.Application.dll
